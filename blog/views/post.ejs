@@ -1,9 +1,14 @@
 <% include partials/header %>
-<main class="container">
-    <article>
-        <h1><%= post.title %></h1>
-        <div>
-            <%- post.postContent %>
-        </div>
-</main>
-<% include partials/footer %>
+    <main class="container">
+        <article>
+            <div class="jumbotron">
+                <h1 class="display-3">
+                    <%= post.title %>
+                </h1>
+                <div>
+                    <%- post.postContent %>
+                </div>
+            </div>
+
+    </main>
+    <% include partials/footer %>
