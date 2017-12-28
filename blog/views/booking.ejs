@@ -1,0 +1,79 @@
+<% include partials/header %>
+<main class="container">
+        <div class="row no-gutters my-4">
+            <h1 class="col text-center text-danger">Book Dan Hoffman Jr for your holiday party!</h1>
+        </div>
+        <div class="row no-gutters">
+            <!-- START FORM -->
+            <form class="container" action="http://formreflector.azurewebsites.net/form-reflector/" method="post">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom01">First name</label>
+                        <input type="text" class="form-control" name="nameFirst" id="validationCustom01" placeholder="First name" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom02">Last name</label>
+                        <input type="text" class="form-control" name="nameLast" id="validationCustom02" placeholder="Last name" value="" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">City</label>
+                        <input type="text" class="form-control" name="city" id="validationCustom03" placeholder="City" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom04">State</label>
+                        <input type="text" class="form-control" name="state" id="validationCustom04" placeholder="State" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom05">Zip</label>
+                        <input type="text" class="form-control" name="zip" id="validationCustom05" placeholder="Zip" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 pr-0">
+                        <label for="inlineFormInput">User Name</label>
+                        <input type="text" class="form-control" name="username" id="inlineFormInput" placeholder="jane.doe">
+                        <div class="invalid-feedback">
+                            Please provide your username.
+                        </div>
+                    </div>
+                    <div class="col-md-3 pl-0">
+                        <label for="inlineFormInputGroup">Domain Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">@</div>
+                            <input type="text" class="form-control" name="domain" id="inlineFormInputGroup" placeholder="hostname.com">
+                            <div class="invalid-feedback">
+                                Please provide your email host provider.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inlineFormInput">Date &amp; Time</label>
+                        <input type="datetime-local" class="form-control" name="dateTime" id="inlineFormInput" placeholder="01/01/2020">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="exampleFormControlSelect1">Duration</label>
+                        <select class="form-control" name="duration" id="exampleFormControlSelect1">
+                            <option>1 hour</option>
+                            <option>2 hours</option>
+                            <option>3 hours</option>
+                            <option>4 hours</option>
+                            <option>I may never leave</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-4" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+<% include partials/footer %>

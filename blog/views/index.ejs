@@ -1,0 +1,19 @@
+<% include partials/header %>
+<main class="container">
+    <div>
+      <% for(var i = 0; i < post.length; i++){ %>
+        <article>
+          <h1><a href="/post/<%= post[i].permalink %>"><%= post[i].title %></a></h1>
+          <p>
+              By: <%- post[i].author %>
+          </p>
+          <div>
+            <%- post[i].postContent %>
+          </div>
+        </article>
+        <button><a href="/edit/<%= post[i].permalink %>">Edit</a></button>
+        <button><a href="/delete/<%= post[i].permalink %>">Delete</a></button>
+      <% } %>
+  </div>
+</main>
+<% include partials/footer %>
