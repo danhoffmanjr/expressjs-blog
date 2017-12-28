@@ -1,23 +1,23 @@
 <% include partials/header %>
   <main class="container">
-    <div class="row">
-      
-        <% for(var i = 0; i < post.length; i++){ %>
-          <div class="col-md-6 my-3">
-          <div class="card">
+    <% for(var i = 0; i < post.length; i++){ %>
+        <!-- <div class="row">
+          <div class="card text-center">
+            <div class="card-header">
+              Featured
+            </div>
             <div class="card-body">
-              <h4 class="card-title">
+              <h5 class="card-title">
                 <a href="/post/<%= post[i].permalink %>">
                   <%= post[i].title %>
                 </a>
-              </h4>
+              </h5>
               <h6 class="card-subtitle mb-2 text-muted">By:
                 <%- post[i].author %>
               </h6>
               <p class="card-text">
                 <%- post[i].postContent %>
               </p>
-
               <button>
                 <a href="/edit/<%= post[i].permalink %>">Edit</a>
               </button>
@@ -25,10 +25,35 @@
                 <a href="/delete/<%= post[i].permalink %>">Delete</a>
               </button>
             </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
           </div>
-          </div>
+        </div> -->
+          <div class="row my-2">
+            <div class="col card mx-3">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="/post/<%= post[i].permalink %>">
+                    <%= post[i].title %>
+                  </a>
+                </h4>
+                <h6 class="card-subtitle mb-2 text-muted">By:
+                  <%- post[i].author %>
+                </h6>
+                <p class="card-text">
+                  <%- post[i].postContent %>
+                </p>
 
-          <% } %>
-    </div>
+                <button>
+                  <a href="/edit/<%= post[i].permalink %>">Edit</a>
+                </button>
+                <button>
+                  <a href="/delete/<%= post[i].permalink %>">Delete</a>
+                </button>
+              </div>
+            </div>
+          </div>
+            <% } %>
   </main>
   <% include partials/footer %>
