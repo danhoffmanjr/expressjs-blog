@@ -69,6 +69,10 @@ let repo = {
     deletePost: (index) => {
         posts.splice(index, 1);
         savePosts();
+    },
+    updatePost: (index, update) => {
+        posts[index] = update;
+        savePosts();
     }
 };
 

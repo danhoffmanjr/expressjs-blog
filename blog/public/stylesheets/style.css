@@ -8,6 +8,11 @@ body {
     width: 80px;
 }
 
+.card {
+    max-height: 20rem;
+    overflow-y: scroll;
+}
+
 /* .carousel-inner {
     max-height: 400px;
     border-bottom-left-radius: .8rem;

@@ -10,6 +10,7 @@ var about = require('./routes/about');
 var post = require('./routes/post');
 var newpost = require('./routes/newpost');
 var delpost = require('./routes/delete');
+var updatepost = require('./routes/edit');
 
 var app = express();
 
@@ -28,8 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/about', about);
 app.use('/post', post);
-app.use('/newpost', newpost)
-app.use('/delete', delpost)
+app.use('/newpost', newpost);
+app.use('/delete', delpost);
+app.use('/edit', updatepost);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
