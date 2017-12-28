@@ -1,19 +1,33 @@
 <% include partials/header %>
-<main class="container">
-    <div>
-      <% for(var i = 0; i < post.length; i++){ %>
-        <article>
-          <h1><a href="/post/<%= post[i].permalink %>"><%= post[i].title %></a></h1>
-          <p>
-              By: <%- post[i].author %>
-          </p>
-          <div>
-            <%- post[i].postContent %>
+  <main class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <% for(var i = 0; i < post.length; i++){ %>
+
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/post/<%= post[i].permalink %>">
+                  <%= post[i].title %>
+                </a>
+              </h4>
+              <h6 class="card-subtitle mb-2 text-muted">By:
+                <%- post[i].author %>
+              </h6>
+              <p class="card-text">
+                <%- post[i].postContent %>
+              </p>
+
+              <button>
+                <a href="/edit/<%= post[i].permalink %>">Edit</a>
+              </button>
+              <button>
+                <a href="/delete/<%= post[i].permalink %>">Delete</a>
+              </button>
+            </div>
           </div>
-        </article>
-        <button><a href="/edit/<%= post[i].permalink %>">Edit</a></button>
-        <button><a href="/delete/<%= post[i].permalink %>">Delete</a></button>
-      <% } %>
-  </div>
-</main>
-<% include partials/footer %>
+          <% } %>
+      </div>
+    </div>
+  </main>
+  <% include partials/footer %>
